@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+}
+#diagram-wrap {
+  margin: 30px auto 0;
+}
+#diagram-title {
+  background-color: #143058;
+  color: #fff;
+  margin: 0;
+  height: 40px;
+  padding: 15px;
+  text-align: center;
+}
+#ind-msg {
+	font-size: 14px;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+footer {
+	background-color: #2f4361;
+	height: 30px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
