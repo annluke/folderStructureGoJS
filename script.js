@@ -127,6 +127,7 @@ function callGO() {
   folderDiagram.model = new go.TreeModel(nodeDataArray);
 
 }
+
 // set node icon based on node type
 function imageConverter(prop, picture) {
   var node = picture.part;
