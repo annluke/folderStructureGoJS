@@ -1,5 +1,5 @@
 body {
-	margin: 0;
+  margin: 0;
 }
 #diagram-wrap {
   margin: 30px auto 0;
@@ -13,14 +13,14 @@ body {
   text-align: center;
 }
 #ind-msg {
-	font-size: 14px;
-	margin-left: 15px;
-	margin-top: 20px;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-top: 20px;
 }
 footer {
-	background-color: #2f4361;
-	height: 30px;
-	position: fixed;
-	width: 100%;
-	bottom: 0;
+  background-color: #2f4361;
+  height: 30px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
