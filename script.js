@@ -13,17 +13,17 @@ function callGO() {
         compaction: go.TreeLayout.CompactionNone,
         layerSpacing: 30,
         layerSpacingParentOverlap: 1,
-        nodeIndent: 2,
+        nodeIndent: 1,
         nodeIndentPastParent: 1,
-        nodeSpacing: 0,
-        setsPortSpot: false,
-        setsChildPortSpot: false
+        nodeSpacing: 0
       })
     });
   folderDiagram.nodeTemplate =
     $(go.Node, { 
-        selectionAdorned: false,
-        isTreeExpanded: false,
+        selectionAdorned: false
+      },
+      {
+        isTreeExpanded: false
       },
       $("TreeExpanderButton", {
         width: 14,
@@ -33,7 +33,7 @@ function callGO() {
         "_buttonStrokeOver": null
       }),
       $(go.Panel, "Horizontal", 
-        { position: new go.Point(16, 0) },
+        { position: new go.Point(20, 0) },
         new go.Binding("background", "isSelected", function(s) {
           return (s ? "lightblue" : "white");
         }).ofObject(),
@@ -45,7 +45,7 @@ function callGO() {
           },
           new go.Binding("source", "isTreeExpanded", imageConverter).ofObject(),
           new go.Binding("source", "isTreeLeaf", imageConverter).ofObject()),
-        $(go.TextBlock, { font: '14px Verdana, sans-serif' },
+        $(go.TextBlock, { font: '15px Verdana, sans-serif' },
           new go.Binding("text", "name")
         ), 
         {
@@ -63,11 +63,11 @@ function callGO() {
   folderDiagram.linkTemplate = $(go.Link);
 
   folderDiagram.addDiagramListener("InitialLayoutCompleted", function(e) {
-      e.diagram.findTreeRoots().each(function(r) { r.expandTree(3); });
-    });
+    e.diagram.findTreeRoots().each(function(r) { r.expandTree(3); });
+  });
 
   var nodeDataArray = [
-    { key: "1", name: "whscommitment", desc: "Root directory" },
+    { key: "1", name: "whscommitment", desc: "root directory" },
     { key: "2", parent: "1", name: "includes", desc: "contains files with php functions to be included in the site " },
     { key: "3", parent: "1", name: "misc", desc: "contains miscellaneous assets" },
     { key: "4", parent: "1", name: "modules", desc: "contains core modules that provide basic functionality of Drupal" },
